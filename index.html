@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="contenedor">
+      <div class="card">
+        <div class="cd-completo">
+          <img
+            class="fondo"
+            src="imagenes/fondo.png"
+            alt="fondo tapa de disco"
+          />
+          <img class="cd" src="imagenes/cd.png" alt="" />
+          <img class="tapa" src="imagenes/tapa.png" alt="" />
+        </div>
+        <div class="reproductor">
+          <h1>Do you Feel It?</h1>
+          <p>Chaos Chaos</p>
+          <audio class="audio-xd" id="audio-xd">
+            <source
+              src="imagenes/Do you Feel It_ - Chaos Chaos _ Subtitulado al español.mp3"
+              type="audio/mp3"
+            />
+          </audio>
+          <input type="range" value="0" class="progreso" id="progreso" />
+          <div class="controles">
+            <button class="reiniciar" id="reiniciar">
+              <i class="bi bi-arrow-clockwise" id="reiniciar"></i>
+            </button>
+            <button class="play" id="play"><i class="bi bi-play-circle-fill" id="icono"></i></button>
+            <button class="mute" id="mute"><i class="bi bi-volume-mute-fill" id="mute_xd"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+
+body{
+    font-family:"Poppins", sans-serif;
+    margin: 0;
+    background-color: black;
+    background-image: url('imagenes/img-noise-361x370.png');
+    overflow: hidden;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.card{
+    background-color: #1c1c1c;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 8px 5px 10px 1px rgb(15, 15, 15);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+.cd-completo{
+    position: static;
+}
+img{
+    width: 200px;
+    position: absolute;
+}
+.fondo{
+    z-index: 500;
+    translate: 40% 10%;
+    
+}
+.cd{
+    z-index: 501;
+    translate: 40% 10%;
+    animation: rotacion linear 10s infinite;
+}
+@keyframes rotacion{
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(-360deg);
+    }
+}
+.tapa{
+    z-index: 502;
+    height: 200px;
+    width: 50px;
+    translate: 150% 10%;
+}
+.reproductor{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px;
+}
+p{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.progreso{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.349);
+    border-radius: 10px;
+    height: 5px;
+    cursor: pointer;
+}
+.progreso::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: black;
+    width: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 2px solid white;
+    box-shadow: 0 6px 10px black;
+    transition: all 0.3s linear;
+}
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controles button{
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.controles i{
+    color: white;
+    font-size: 1.5em;
+}
+.controles button:hover{
+    scale: 1.1;
+}
+.progreso::-webkit-slider-thumb:hover{
+    scale: 1.2;
+}
+@media (max-width:340px){
+    .card{
+    width: 300px;
+    height: 500px;
+    }
+    .fondo{
+        translate: 25% 10%;
+    }
+    .cd{
+        translate: 25% 10%;
+    }
+    .tapa{
+        translate: 100% 10%;
+    }
+}
